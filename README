@@ -1,0 +1,18 @@
+Herramienta de ayuda para jugar en el beisbol
+La aplicacion debe reducir el tiempo invertido para escoger un juego, y ayudar entrenarse para minimizar las perdidas.
+
+El primer prototipo seran, scripts en sh usando herramientas como sed, awk, wget. Corriendolas sobre linux, para windows se usara Qemu o una maquina virtual.
+
+TODO(s)
+- Update todo list
+1. Obtener lista de juegos (+)
+0a. Tag remover utility
+0b. Set-up a git repository for code interchange
+2. Leer estadisticas en tiempo real (pitcher, team)
+3. Comparar estadisticas (H2H - Pitcher, Team, Inter-source)
+3a. Ofrecer estadisticas por juego H2H
+4. Estadisticas historicas (Para W-L correlation for each game)
+4b. Correlation for RL, Chicas, OU
+5. Obtener money-lines
+6. Virtual Betting or Real Betting Log
+
