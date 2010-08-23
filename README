@@ -3,8 +3,11 @@ La aplicacion debe reducir el tiempo invertido para escoger un juego, y ayudar e
 
 El primer prototipo seran, scripts en sh usando herramientas como sed, awk, wget. Corriendolas sobre linux, para windows se usara Qemu o una maquina virtual.
 
+Ideas: Present information in a HTML based UI
+
 TODO(s)
 - Update todo list
+- Help to identify what went wrong if pick fails (was it a wrong pick or just luck? Can you avoid those situations or learn anything new?)
 1. Obtener lista de juegos (+)
 0a. Tag remover utility
 0b. Set-up a git repository for code interchange
