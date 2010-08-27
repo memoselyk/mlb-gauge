@@ -9,9 +9,19 @@
 # Schedule is fetched from http://mlb.mlb.com/components/schedule/schedule_YYYMMDD.json ex http://mlb.mlb.com/components/schedule/schedule_20100818.json
 # parsing is based on http://mlb.mlb.com/scripts/schedule/scheduleapp.js
 
+CONFIG_FILE="$( cd -P -- "$(dirname -- "$0")" && pwd -P )/../../config/config.inc"
+[ ! -e "$CONFIG_FILE" ] && { echo -n "Configuration file not found\n"; exit 5; }
+. "$CONFIG_FILE"
+
 [ $# -eq 1 ] || { echo -n "Usage:\n\t$0 <date>\n"; exit 1; }
 
-cat $1 | awk --field-separator \' '
+if [ -n "$DEV" ]; then
+	echo "Reading from local $1" 1>&2
+	cat $1
+else
+	echo "Fetched from Network" 1>&2
+	wget -q -O - 'http://mlb.mlb.com/components/schedule/schedule_20100818.json'
+fi | awk --field-separator \' '
 
 function fluch() {
 	printf "%s ; %s ; %s ; %s ; %s ; %s ; %s\n",
