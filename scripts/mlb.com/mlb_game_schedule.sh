@@ -9,7 +9,7 @@
 # Schedule is fetched from http://mlb.mlb.com/components/schedule/schedule_YYYMMDD.json ex http://mlb.mlb.com/components/schedule/schedule_20100818.json
 # parsing is based on http://mlb.mlb.com/scripts/schedule/scheduleapp.js
 
-[ $# -eq 1 ] || exit 2
+[ $# -eq 1 ] || { echo -n "Usage:\n\t$0 <date>\n"; exit 1; }
 
 cat $1 | awk --field-separator \' '
 
